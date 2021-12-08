@@ -1,7 +1,9 @@
-var favoriteFood = "a chicken salad sandwich from Mcalisters";
+var favoriteFood = "a chicken salad sandwich from Mcalisters!";
 
 console.log("I love and cannot live without " + favoriteFood + "!!!!");
 
-var holdUpWaitAMinute = "Please HOLD THE ONIONS";
+var holdUpWaitAMinute = "\n\tPlease \n\t\tHOLD \n\tTHE \n\t\tONIONS";
 
-console.log("I love and cannot live without " + favoriteFood + "!!!! " + holdUpWaitAMinute + "!!!");
+console.log("\n\tI love and cannot live without " + favoriteFood + holdUpWaitAMinute + "!!!");
+
+
