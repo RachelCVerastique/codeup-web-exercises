@@ -87,3 +87,8 @@ var herc = 3
 
 console.log(mermaid + bBear + herc);
 
+var amz = 380 * 4
+var goog = 400 * 6
+var fb = 350 * 10
+
+console.log(amz + goog + fb);
