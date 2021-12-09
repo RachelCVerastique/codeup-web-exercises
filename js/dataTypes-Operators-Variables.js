@@ -53,13 +53,42 @@ console.log( isNaN("true"));
 console.log( isNaN(true));
 
 
+console.log( isNaN("false"));
 
-isNaN("false")
-
-isNaN(false)
+console.log( isNaN(false));
 
 // to illustrate why the isNaN() function is needed:
 NaN == NaN
+
+
+console.log( !true);
+
+console.log( !false);
+
+console.log( !!true);
+
+console.log( !!false);
+
+console.log( !!0);
+
+console.log( !!-0);
+
+console.log( !!1);
+
+console.log( !!-1);
+
+console.log( !!0.1);
+
+console.log( !!"hello");
+
+console.log( !!"");
+
+console.log( !!'');
+
+console.log( !!"false");
+
+console.log( !!"0");
+
 
 var sample = "Hello Codeup";
 
@@ -81,9 +110,9 @@ console.log(sample.indexOf("C"));
 
 console.log(sample.substring(6, 12));
 
-var mermaid = 9
-var bBear = 15
-var herc = 3
+var mermaid = 3 * 3
+var bBear = 5 * 3
+var herc = 1 * 3
 
 console.log(mermaid + bBear + herc);
 
