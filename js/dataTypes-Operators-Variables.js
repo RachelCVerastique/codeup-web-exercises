@@ -75,4 +75,15 @@ console.log(sample += " students");
 
 console.log(sample.replace('students' , 'class'));
 
-console.log(sample.indexOf(c));
+console.log(sample.indexOf("c"));
+
+console.log(sample.indexOf("C"));
+
+console.log(sample.substring(6, 12));
+
+var mermaid = 9
+var bBear = 15
+var herc = 3
+
+console.log(mermaid + bBear + herc);
+
