@@ -6,4 +6,3 @@ var holdUpWaitAMinute = "\n\tPlease \n\t\tHOLD \n\tTHE \n\t\tONIONS";
 
 console.log("\n\tI love and cannot live without " + favoriteFood + holdUpWaitAMinute + "!!!");
 
-
