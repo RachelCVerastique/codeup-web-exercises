@@ -1,3 +1,5 @@
+//Exercises
+//1.
 var a = 1;
 var b = a++;
 var c = ++a;
@@ -60,6 +62,8 @@ console.log( isNaN(false));
 // to illustrate why the isNaN() function is needed:
 NaN == NaN
 
+//2.
+
 
 console.log( !true);
 
@@ -108,7 +112,9 @@ console.log(sample.indexOf("c"));
 
 console.log(sample.indexOf("C"));
 
-console.log(sample.substring(6, 12));
+console.log(sample.substring(sample.indexOf("C"), sample.indexOf("p") + 1));
+
+//3.
 
 var mermaid = 3 * 3
 var bBear = 5 * 3
@@ -120,4 +126,42 @@ var amz = 380 * 4
 var goog = 400 * 6
 var fb = 350 * 10
 
-console.log(amz + goog + fb);
+var total = amz + goog + fb
+
+console.log("$" + total);
+
+
+
+
+//student
+var student = 1
+var enrolled = 10
+var course = student + enrolled
+
+if (course > 9) {
+    message = "Enrolled.";}
+    else {
+        message = "Course closed, no open availability.";
+}
+console.log(message);
+
+//product offer
+var items = 8
+var discount = .15
+var price = 2
+
+if ( items >= 2) {
+
+
+//4.
+var username = 'codeup';
+var password = 'notastrongpassword';
+var user = username.trim();
+var pass = password.trim();
+
+if ((pass.includes(username) && (pass.length > 5) && (user.length <=20))){
+    console.log("Username / Password does not meet requirements")
+} else {
+    console.log("Account has been created")}}
+
+
