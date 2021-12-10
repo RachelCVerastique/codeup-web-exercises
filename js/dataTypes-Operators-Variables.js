@@ -102,11 +102,9 @@ console.log(sample.toUpperCase());
 
 console.log(sample.toLowerCase());
 
-console.log(sample + " students");
+console.log(sample = sample + " students");
 
-console.log(sample += " students");
-
-console.log(sample.replace('students' , 'class'));
+console.log(sample.replace('students' ,'class'));
 
 console.log(sample.indexOf("c"));
 
@@ -120,25 +118,28 @@ var mermaid = 3 * 3
 var bBear = 5 * 3
 var herc = 1 * 3
 
-console.log(mermaid + bBear + herc);
+console.log("Your total for your rentals is $" + (mermaid + bBear + herc));
 
-var amz = 380 * 4
-var goog = 400 * 6
-var fb = 350 * 10
+var amzrt = 380
+var googrt = 400
+var fbrt = 350
+var amzhr = 4
+var googhr = 6
+var fbhr =  10
 
-var total = amz + goog + fb
-
-console.log("$" + total);
+var total = ( (amzrt * amzhr) + (googrt * googhr) +  (fbrt * fbhr))
+console.log("You will get paid $" + total);
 
 
 
 
 //student
 var student = 1
-var enrolled = 10
+var enrolled = 11
 var course = student + enrolled
+var doesNotConflict = false
 
-if (course > 9) {
+if (course > 9 || !doesNotConflict) {
     message = "Enrolled.";}
     else {
         message = "Course closed, no open availability.";
