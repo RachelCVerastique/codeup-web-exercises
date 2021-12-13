@@ -50,7 +50,9 @@
 
 var premiumMember = prompt('Are you a premium member?')
  if (premiumMember.includes("yes")){
-     alert()
+     alert('No minimum item purchase for premium members');
+ } else {
+     alert('A minimum of 2 items is required to use promotion')
  }
 
 
