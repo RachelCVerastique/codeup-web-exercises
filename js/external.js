@@ -32,18 +32,26 @@
 
 //----------------------------------------------------------------------------------------------------------------------
 
-var timeInput =prompt( 'This course is at 10 a.m. , is there a schedule conflict present?');
-var studentsEnrolled = 17
+// var timeInput =prompt( 'This course is at 10 a.m. , is there a schedule conflict present?');
+// var studentsEnrolled = 17
+//
+//  if (timeInput.includes("No")) {
+//      var studentInput = parseInt(prompt('Enter number of enrolling students.'))
+//      // alert('Move on to further determine enrollment eligibility.');
+//  } else {
+//      (alert('Schedule conflict present ineligible to enroll'));
+//  }
+//  if (studentInput + studentsEnrolled < 22) {
+//      alert('Student(s) enrollment successful!');
+// } else { alert('ineligible for enrollment at this time.')}
 
- if (timeInput.includes("No")) {
-     var studentInput = parseInt(prompt('Enter number of enrolling students.'))
-     // alert('Move on to further determine enrollment eligibility.');
- } else {
-     (alert('Schedule conflict present ineligible to enroll'));
+
+//----------------------------------------------------------------------------------------------------------------------
+
+var premiumMember = prompt('Are you a premium member?')
+ if (premiumMember.includes("yes")){
+     alert()
  }
- if (studentInput + studentsEnrolled < 22) {
-     alert('Student(s) enrollment successful!');
-} else { alert('ineligible for enrollment at this time.')}
 
 
 
