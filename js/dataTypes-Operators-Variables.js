@@ -169,15 +169,32 @@
 
 // console.log(message);
 
+var p = 8
+var price = 1 * p
+var offer = price * .10
+//var good = "Offer valid"
+//var notGood = "Offer expired"
+var premiumMember = p >= 1
+var member = p >= 2
+
+
+
+function discount() {
+    if (premiumMember) {
+        return (price - offer);
+    }
+}
+console.log(discount());
 
 
 
 
 
 
-//if ( items >= 2) {
-  //  discount
-//}
+
+
+
+
 
 
 //4.
