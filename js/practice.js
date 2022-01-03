@@ -24,4 +24,39 @@
 // } else{
 //     console.log("thank god we're making progress")
 // }
+//
+// function addFive(num) {
+//     return num + 5;
+// }
+//
+// console.log(addFive(5))
 
+//
+// function isZero(num) {
+//     return num === 0
+// }
+//
+// console.log(isZero(0))
+//
+
+//
+// function square(num) {
+//     return num ** 2;
+// }
+//
+// console.log(square(153))
+//
+// function analyzeColor(color) {
+//      if (color === "black") {
+//          return("Black berries are black");
+//      } if (color === "red") {
+//          return("Roses are red");
+//      } if (color === "purple") {
+//          return("Plums are purple");
+//      } if (color === "orange") {
+//          return("oranges are orange");
+//      } return "I dont know anything about that color;
+//
+//      }
+//
+//  console.log(analyzeColor("purple"));

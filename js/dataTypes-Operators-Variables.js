@@ -147,27 +147,27 @@
 // console.log(message);
 
 //product offer
-var items = 5
-var price = 2
-var itemsTotal = items * price
-var discount = .15 * itemsTotal
-var promotionApplied = itemsTotal - discount
-var expired = message = "Promotion no longer valid"
-var notExpired = message = "promotion valid"
-var premiumMember = items >= 1
+// var items = 5
+// var price = 2
+// var itemsTotal = items * price
+// var discount = .15 * itemsTotal
+// var promotionApplied = itemsTotal - discount
+// var expired = message = "Promotion no longer valid"
+// var notExpired = message = "promotion valid"
+// var premiumMember = items >= 1
+//
+// if ( items >= 2 && expired || premiumMember ){
+//     message = "Promotion has been applied, your total with the discount is $" + promotionApplied;
+// } else { message = "Add additional items to have promotion applied"; {
+//     else if (expired) {
+//
+//     } else if ()
+// }
+//
+// }
 
-if ( items >= 2 && expired || premiumMember ){
-    message = "Promotion has been applied, your total with the discount is $" + promotionApplied;
-} else { message = "Add additional items to have promotion applied"; {
-    else if (expired) {
 
-    } else if ()
-}
-
-}
-
-
-console.log(message);
+// console.log(message);
 
 
 
@@ -190,5 +190,24 @@ console.log(message);
 //     console.log("Username / Password does not meet requirements")
 // } else {
 //     console.log("Account has been created")}}
+
+
+//
+// var i = 0;
+//
+// while (i < 25) {
+//     if (i % 2 === 0)
+//     console.log(i) ;
+//     i++;
+// }
+//
+//
+//
+
+
+
+
+
+
 
 

@@ -7,11 +7,20 @@
 //     console.log("credit score is insufficient, 10k down is required down");
 // } else {
 //     console.log("we cannot approve you at this time")}
+//
+// function isFive(number) {
+//     if (number === 5) {
+//         return true;
+//     } else { return false};
+// }
+//
+// isFive(6)
 
-function isFive(number) {
-    if (number === 5) {
-        return true;
-    } else { return false};
-}
+// Make a function named isMultipleOfThree that takes in an
+// input and returns a boolean indicating whether or not the input is a multiple of three.
 
-isFive(6)
+// function isMultipleOfThree(num) {
+//     return num % 3 === 0;
+// }
+//
+// console.log(isMultipleOfThree(9))
