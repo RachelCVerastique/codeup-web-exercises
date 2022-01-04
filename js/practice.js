@@ -131,20 +131,71 @@
 // What if getFizzBuzz doesn't return a value (VOID)?
 // How do you want to handle that?
 
+//
+//     function getFizzBuzz(startingNum) {
+//         if (startingNum % 3 === 0 && startingNum % 5 === 0) {
+//             return "Fizz Buzz";
+//         } else if (startingNum % 5 === 0) {
+//             console.log("Buzz");
+//         } else if (startingNum % 3 === 0) {
+//             console.log("Fizz");
+//         }
+//     }
+// console.log(getFizzBuzz(9))
 
-    function getFizzBuzz(startingNum) {
-        if (startingNum % 3 === 0 && startingNum % 5 === 0) {
-            return "Fizz Buzz";
-        } else if (startingNum % 5 === 0) {
-            console.log("Buzz");
-        } else if (startingNum % 3 === 0) {
-            console.log("Fizz");
+
+
+// getPaswordInput
+// Define a function named getPassword() which performs the following actions:
+//     Using prompt(), alert(), variables, and a while-loop, ask the user to input their password until their entry matches your hard-coded password value.
+//     HINT: start by defining the correct password and don't forget to link your html file
+
+
+//     function getPassword() {
+//         var correctPassword = "banana";
+//         var userInput = prompt("Enter password");
+//
+//         while(userInput !== correctPassword) {
+//             alert("Incorrect password, Try again!");
+//             userInput = prompt("Enter password");
+//         }
+//         alert("Correct password!");
+//     }
+//
+// getPassword();
+
+
+// getMeaningOfLife
+// Write a function named getMeaningOfLife which accepts one parameter, meaningfulNum.
+//     This function will use a while loop to compare its current number (a variable named counter) against the meaningfulNum.
+//     While the counter is not equivalent to the meaningfulNum, continue the loop.
+//     Once that condition is broken (i.e., the loop’s test fails), console log a string telling the user "The meaning of life, the universe, and everything is [your meaningful number]"
+// Thinking about the above function, getMeaningOfLife, let’s ask a question: What happens if the value of meaningfulNum is a non-numeric?
+//     Write some code to account for this case. How the function handles the situation is up to you!
+//     Let’s continue with getMeaningOfLife: If the value of meaningfulNum happens to be 42, console log a separate message at the end of the function to say: "Did you bring your towel?"
+
+
+
+    function getMeaningOfLife(meaningfulNum) {
+        let counter = 0;
+        meaningfulNum = parseInt(meaningfulNum);
+
+
+
+        if (!isNaN(meaningfulNum)) {
+            while( counter !== meaningfulNum) {
+                counter++;
         }
+            console.log("The meaning of life, the universe, and everything is " + counter);
+
+            if(counter === 42) {
+                console.log("Did you bring your towel?")
+            }
+        }
+
     }
-console.log(getFizzBuzz(9))
 
-
-
+getMeaningOfLife(-42);
 
 
 
