@@ -176,26 +176,125 @@
 
 
 
-    function getMeaningOfLife(meaningfulNum) {
-        let counter = 0;
-        meaningfulNum = parseInt(meaningfulNum);
+//     function getMeaningOfLife(meaningfulNum) {
+//         let counter = 0;
+//         meaningfulNum = parseInt(meaningfulNum);
+//
+//
+//
+//         if (!isNaN(meaningfulNum)) {
+//             while( counter !== meaningfulNum) {
+//                 counter++;
+//         }
+//             console.log("The meaning of life, the universe, and everything is " + counter);
+//
+//             if(counter === 42) {
+//                 console.log("Did you bring your towel?")
+//             }
+//         }
+//
+//     }
+//
+// getMeaningOfLife(-42);
+
+
+// function petThoseDoggos(numberOfDoggos){
+//     for (let i = 1; i <= numberOfDoggos; i++) {
+//         console.log(  i + ' Good doggo')
+//
+//     }
+// }
+//
+//
+// petThoseDoggos(42)
+//
+
+
+// TODO: MINI EXERCISE
+//      Write a function which uses a for-loop and
+//      -> accepts the number of times to iterate as a parameter
+//      -> only logs *if the iteration number is odd*
+
+
+//
+//  function exerciseOne(num) {
+//     for (let i = 0; i < num; i++) {
+//         if (i % 2 !== 0) {
+//             console.log(i + " is odd")
+//         }
+//     }
+//  }
+//
+//
+// exerciseOne(10);
 
 
 
-        if (!isNaN(meaningfulNum)) {
-            while( counter !== meaningfulNum) {
-                counter++;
-        }
-            console.log("The meaning of life, the universe, and everything is " + counter);
 
-            if(counter === 42) {
-                console.log("Did you bring your towel?")
-            }
-        }
 
+
+
+
+
+// TODO: MINI EXERCISE
+//      Write a function which uses a for-loop and
+//      -> accepts the number of times to iterate as a parameter
+//      -> logs "This is an even iteration" on the evens
+//      -> logs "This is an odd iteration" on the odds
+
+//
+// function evenOdd(num) {
+//     for (let i = 0; i < num; i++) {
+//         if (i % 2 !== 0) {
+//             console.log(i + " is odd");
+//         } else {
+//             console.log(i + " is even")
+//         }
+//     }
+// }
+//
+//
+// evenOdd(20)
+
+
+
+// TODO: MINI EXERCISE
+//      Make a new version of your getPassword function using a for-loop!
+//      -> The purpose of the for-loop is to only allow a maximum number of attempts
+//          -> If the max attempt used unsuccessfully, alert the user of such and RETURN or BREAK
+//      -> Once the user enters the correct password, use the 'break' keyword to end the loop
+//      -> After the loop concludes, alert the use they have entered the correct password
+
+
+// function getPassword() {
+//     var answer = "howdy";
+//     var guess = "";
+//     for (let i = 0; i < 3; i++) {
+//         guess = prompt("enter password");
+//         if(guess === answer) {
+//             alert("logged in");
+//             return;
+//         }
+//     }
+//     alert("cops have been called");
+
+}
+
+
+
+
+// Mini Exercise
+// -Create an array with five strings representing your favorite artists (music or otherwise) and store it in a variable called favoriteArtists
+// -Write a function that accepts an array as a parameter and...
+// -> logs the first, third, and last elements of that array
+// -Invoke your function and pass favoriteArtists as an argument
+
+var favoriteArtists = ["A Perfect Circle", "Korn", "Slipknot", "Tool", "Kittie"]
+
+    function musicArtists() {
+    console.log()
     }
 
-getMeaningOfLife(-42);
 
 
 

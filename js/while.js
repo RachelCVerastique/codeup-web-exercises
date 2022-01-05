@@ -5,11 +5,17 @@
 //         console.log(i *= 2);
 // }
 
-var ic = 0
-var allCones = Math.floor(Math.random() * 50) + 50;
 
+let allCones = Math.floor(Math.random() * 50) + 50;
+let conesSold;
 do {
-    console.log()
-    Math.floor(Math.random() * 5) + 1;
 
-} while(ic < 100);
+    conesSold =  Math.floor(Math.random() * 5) + 1;
+    console.log(conesSold)
+    if (conesSold > allCones){
+        console.log("No more " + conesSold)
+    }
+
+    allCones-= conesSold;
+    console.log("There are " + allCones + " left")
+} while(allCones < 0);
