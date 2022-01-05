@@ -7,7 +7,7 @@
      * 'names'.
      */
 
-    var names = ["Maire", "Avalynn", "Riley", "Emma"]
+    let names = ["Maire", "Avalynn", "Riley", "Emma", "Thorin"]
 
 
 
@@ -20,7 +20,7 @@
      * array.
      */
 
-    console.log(names.length);
+    //console.log(names.length);
 
 
 
@@ -31,10 +31,10 @@
      * accessing each element's index.
      */
 
-    console.log(names[0]);
-    console.log(names[1]);
-    console.log(names[2]);
-    console.log(names[3]);
+    // console.log(names[0]);
+    // console.log(names[1]);
+    // console.log(names[2]);
+    // console.log(names[3]);
 
 
     /**
@@ -43,9 +43,9 @@
      * array.
      */
 
-    for (let i = 0; i < 4; i++) {
-        console.log(names[i]);
-    }
+    // for (let i = 0; i < names.length; i++) {
+    //     console.log(names[i]);
+    // }
 
 
 
@@ -56,9 +56,9 @@
      */
 
 
-    names.forEach(function (element);
-
-    console.log("Here is a lovely name " + element);
+    // names.forEach(function(name) {
+    //     console.log(name);
+    // })
 
     /**
      * TODO:
@@ -67,11 +67,26 @@
      * - first: returns the first item in the array
      * - second: returns the second item in the array
      * - last: returns the last item in the array
-     *
      * Example:
      *  > first([1, 2, 3, 4, 5]) // returns 1
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+    function first(anArray) {
+        console.log(names[0]);
+    }
+
+    function second(anArray) {
+        console.log(names[1]);
+    }
+
+    function last(anArray) {
+        let lastIndex= names.length-1
+        console.log(names[lastIndex]);
+    }
+
+    console.log(first(names));
+    console.log(second(names));
+    console.log(last(names));
 })();
