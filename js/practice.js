@@ -1,3 +1,5 @@
+
+
 // let myBool = true;
 // let age = 22;
 // let hasDriversLicense = true;
@@ -119,7 +121,7 @@
 // console.log(sumOfSquares(3, 2));
 //
 
-// FIZZ-BUZZZZZZZ
+// FIZZ-BUZZ
 // Write a function named getFizzBuzz(startingNum) which performs the following actions:
 //     If startingNum is divisible by 3
 // console log "fizz"
@@ -278,7 +280,7 @@
 //     }
 //     alert("cops have been called");
 
-}
+//}
 
 
 
@@ -289,16 +291,88 @@
 // -> logs the first, third, and last elements of that array
 // -Invoke your function and pass favoriteArtists as an argument
 
-var favoriteArtists = ["A Perfect Circle", "Korn", "Slipknot", "Tool", "Kittie"]
-
-    function musicArtists() {
-    console.log()
-    }
-
-
+// var favoriteArtists = ["A Perfect Circle", "Korn", "Slipknot", "Tool", "Kittie"]
+//
+//     function musicArtists() {
+//     console.log()
+//     }
 
 
 
 
 
 
+// *** MINI EXERCISE 10 minutes ***
+// Declare an array of two objects for movies
+//     that have the following member values:
+//     title (string)
+// year released (int)
+// rating (string)
+// director (string)
+// imdb rating (decimal)
+// academy award win (boolean)
+// Use imdb.com to look up the info or make up your own info
+// write a printMovie function that takes a movie as a parameter and prints its info.
+//     call it with each of your array elements.
+//     write a printMovies function that takes an array as a parameter, iterates over the array,
+//     and calls printMovie on each of the array elements
+
+
+    var movies = [];
+            movies[0] = {};
+            movies[0].title = "Shallow Hal";
+            movies[0].yearReleased = 2001;
+            movies[0].rating = "PG-13";
+            movies[0].director = "Bobby Farrelly & Peter Farrelly";
+            movies[0].imdbrating = "5.9 / 10";
+            movies[0].academyAwardWin = "none";
+
+            movies[1] = {};
+            movies[1].title = "There's Something About Mary";
+            movies[1].yearReleased = 1998;
+            movies[1].rating = "R";
+            movies[1].director = "Bobby Farrelly & Peter Farrelly";
+            movies[1].imdbrating = "7.1 / 10";
+            movies[1].academyAwardWin = "none";
+
+
+
+
+function printMovie(movie) {
+    console.log("Movie information");
+    console.log("Movie title: " + movies.title);
+    console.log("Year movie released: " + movies.yearReleased);
+    console.log("Movie rating: " + movies.rating);
+    console.log("Movie director(s): " + movies.director);
+    console.log("IMDb movie rating: " + movies.imdbrating);
+    console.log("Academy awards: " + movies.academyAwardWin);
+}
+
+
+//console.log(printMovie())
+
+
+
+
+
+function printMovies(movies) {
+        for (let i = 0; i < movies.length; i++) {
+                printMovie(movies[i]);
+        }
+}
+
+console.log((movies));
+
+
+// *** Continuing MINI EXERCISE until lunch ***
+// Change the director member of your movies to an object
+// with firstName and lastName members
+// Make an array member for your movies called genres.
+//     It is an array of string elements where each element
+// is one of your movies’ genres from imdb.com
+// and change your printMovie function
+// *** last part of MINI EXERCISE ***
+// Add a rate(rating) function to each of your movie objects.
+//     The function takes an int parameter called rating
+// Modify rate(rating) to set a myRating property on that object
+// modify printMovie to display myRating for each movie
