@@ -1,0 +1,46 @@
+h1 {
+    color: lightskyblue; /* single line comment */
+    text-decoration: underline;
+}
+
+#main-header {
+    text-align: center;
+}
+
+
+body {
+    background-color: lightgrey;
+    background-image: url("https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_960_720.jpg");
+    font-family:  "Comic Sans MS", serif;
+}
+
+
+li {
+    list-style: square;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: lightskyblue;
+}
+
+th, td {
+    border:1px solid black;
+    padding: 5px;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:active {
+    color: green;
+}

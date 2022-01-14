@@ -378,4 +378,24 @@
 // modify printMovie to display myRating for each movie
 
 
+// Create a function called arrayToString.
+//     The function takes a parameter called myArray.
+//     It returns a string that is the concatenation of all the elements in myArray.
+//     This function is essentially your own version of join.
+//     Therefore, you cannot use join in your function body :slightly_smiling_face:
+
+
+function arrayToString(myArray) {
+    let concatString = "";
+    for (let i = 0; i < myArray.length; i++) {
+        concatString += myArray[i]
+    }
+
+
+    return concatString;
+}
+
+console.log(arrayToString(["apple", "peach"]))
+
+
 
