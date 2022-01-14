@@ -385,17 +385,41 @@
 //     Therefore, you cannot use join in your function body :slightly_smiling_face:
 
 
-function arrayToString(myArray) {
-    let concatString = "";
-    for (let i = 0; i < myArray.length; i++) {
-        concatString += myArray[i]
+// function arrayToString(myArray) {
+//     let concatString = "";
+//     for (let i = 0; i < myArray.length; i++) {
+//         concatString += myArray[i]
+//     }
+//
+//
+//     return concatString;
+// }
+//
+// console.log(arrayToString(["apple", "peach"]))
+
+
+// JavaScript Warmup:
+//     Define a function named removeAll(array, value) that takes in two arguments. The first argument should be an array and the second argument should be a value you wish to remove
+// Given the following array as an argument (do not define this array inside your function - pass it in as an argument)
+// var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
+// removeAll(bugs, "ant") should return ["mosquito", "scorpion", "mosquito", "typo", "reference error", "type error"]
+// removeAll(bugs, "mosquito") should return ["ant", "scorpion", "ant", "ant", "typo", "reference error", "type error"]
+// removeAll(bugs, "roach") should return the original array b/c “roach” has no occurrances.
+
+var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
+function removeAll(array, value) {
+
+    let filteredArray = []
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] !== value) {
+            filteredArray.push(array[i]);
+        }
     }
-
-
-    return concatString;
+    return filteredArray;
 }
 
-console.log(arrayToString(["apple", "peach"]))
 
 
 
+console.log(removeAll(bugs, "ant"))
