@@ -45,9 +45,14 @@
 // console.log(isFive("five"));
 // -----------------------------------------------------------------------------------------------------------------------
 
-
-
 // Make a function named addFive(input) that adds five to some input.
+
+function addFive(input) {
+    return input + 5;
+}
+
+console.log(addFive("5"));
+//------------------------------------------------------------------------------------------------------------------------
 //     Make a function named isMultipleOfFive(input)
 // Make a function named isThree(input)
 // Make a function named isMultipleOfThree(input)
