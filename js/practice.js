@@ -406,20 +406,22 @@
 // removeAll(bugs, "mosquito") should return ["ant", "scorpion", "ant", "ant", "typo", "reference error", "type error"]
 // removeAll(bugs, "roach") should return the original array b/c “roach” has no occurrances.
 
-var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
-function removeAll(array, value) {
+// var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
+// function removeAll(array, value) {
+//
+//     let filteredArray = []
+//
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] !== value) {
+//             filteredArray.push(array[i]);
+//         }
+//     }
+//     return filteredArray;
+// }
+//
+//
+//
+//
+// console.log(removeAll(bugs, "ant"))
 
-    let filteredArray = []
 
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] !== value) {
-            filteredArray.push(array[i]);
-        }
-    }
-    return filteredArray;
-}
-
-
-
-
-console.log(removeAll(bugs, "ant"))
