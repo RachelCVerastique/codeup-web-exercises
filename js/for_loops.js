@@ -1,10 +1,26 @@
+"use strict";
 
+//     function showMultiplicationTable(num) {
+//         for (let i = 1;i <= 10; i++) {
+//             let result = num * i;
+//             console.log(num + "*" + i + "=" + result);
+//             }
+//         }
+//
+//   showMultiplicationTable(5)
+// ------------------------------------------------------------------------------------------------------------------------
 
-    function showMultiplicationTable(num) {
-        for (let i = 1;i <= 10; i++) {
-            let result = i * num;
-                console.log(num + " x " + i + " = " + result);
-            }
-        }
-
-showMultiplicationTable(7);
+// function randomOddAndEven() {
+//     let randomNum = 0;
+//     for (let i = 0; i < 10; i++) {
+//         randomNum = Math.floor(Math.random()* 180) +20;
+//         if (randomNum % 2 === 0) {
+//             console.log(randomNum + " is even!");
+//         } else {
+//             console.log(randomNum + " is odd!");
+//         }
+//     }
+// }
+//
+// randomOddAndEven();
+// -------------------------------------------------------------------------------------------------------------------------
