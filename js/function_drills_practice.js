@@ -105,12 +105,20 @@
 //
 // console.log(isMultipleOfThreeAndFive(60))
 // ------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
 // Make a function named isMultipleOf(target, n) which checks if target is evenly divisible by n
+
+// function isMultipleOf(target, n) {
+//     if(target % n === 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+//
+//
+// console.log(isMultipleOf(32,5));
+
+
 // Make a function named isTrue(boolean)
 // Make a function named isFalse(boolean)
 // Make a function named isTruthy(input), remember that values other than true will behave like true
