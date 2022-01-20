@@ -1,0 +1,156 @@
+:root {
+    --my-margin: 0 5px;
+}
+
+* {
+    margin: 5px;
+    font-family: Arial, serif;
+}
+
+/*Mobile Devices*/
+
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.alert-info {
+    border: 2px solid lightgray;
+    background-color: paleturquoise;
+    text-align: center;
+    padding: 1em;
+    /*margin: 1em 0;*/
+}
+
+.alert-info a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 8px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.nav-links {
+    list-style-type: none;
+    text-align: center;
+    font-size: 1em;
+    padding-inline-start: 0;
+    margin: 0;
+
+}
+
+li {
+    background-color: lightgray;
+    padding: 1em;
+    justify-content: space-evenly;
+    margin: 1em 0;
+}
+
+
+.header-img {
+    content: url(https://via.placeholder.com/339x224);
+}
+
+.main {
+    margin: 1em 0;
+}
+
+.sub-section {
+    font-style: italic;
+    margin: 1em 0;
+}
+
+footer {
+    justify-content: flex-end;
+    margin-top: 4em;
+}
+
+#social-media-links {
+    display: flex;
+    align-items: flex-end;
+    flex-basis: 10%;
+}
+
+
+
+
+
+
+/*Desktops/Laptops*/
+@media screen and (min-width:992px) {
+    body {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .alert-info {
+        display: none;
+    }
+    .alert-info a {
+        text-decoration: none;
+        color: black;
+    }
+    h1 {
+        text-align: left;
+        font-size: 3.5em;
+        flex-grow: 2;
+    }
+    .nav-links {
+        list-style-type: none;
+        text-align: center;
+        font-size: 1.5em;
+        display: flex;
+    }
+    li {
+        background: none;
+        padding: .5em;
+    }
+    .header-img {
+        display: flex;
+        flex-grow: 1;
+        content: url(https://via.placeholder.com/890x385);
+        /*margin: 0 auto;*/
+        width: width;
+    }
+    .main {
+        margin-top: 2em;
+        padding-top: 25px;
+        flex-basis: 55%
+    }
+    .sub-section {
+        margin-top: 2em;
+        padding-top: 25px;
+        flex-basis: 40%;
+    }
+    h2 {
+        margin: 1em 0;
+    }
+    .sub-section {
+        font-style: italic;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        margin-top: 15em;
+    }
+    p {
+        align-items: flex-end;
+    }
+
+    #social-media-links {
+
+    }
+
+}
