@@ -1,0 +1,72 @@
+body {
+
+
+}
+
+.jumbotron {
+    background-image: url("https://java.codeup.com/img/bootstrap/jumbotron.png");
+    height: 200px;
+}
+
+ul.nav {
+    display: flex;
+
+    flex-shrink: 6;
+}
+
+.badge {
+    border-radius: 10px;
+}
+
+a.nav-link {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: .8em;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 992px) {
+
+
+    .card-body {
+    height: 600px;
+    }
+
+    h1, p {
+        visibility: hidden;
+    }
+
+    .badge {
+        border-radius: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
