@@ -1,0 +1,74 @@
+
+body {
+    background-color: #E6E6E6;
+}
+
+#logo {
+    height: 105px;
+    width: 105px;
+}
+
+.codeup-design {
+    font-family: ;
+}
+
+
+p.circle-two {
+    height: 100px;
+    width: 100px;
+    border: 8px solid white;
+    background-color: #EB9D3A;
+}
+
+p.circle-one {
+    height: 100px;
+    width: 100px;
+    border: 8px solid white;
+    background-color: #E6563B;
+}
+
+p.circle-three {
+    height: 100px;
+    width: 100px;
+    border: 8px solid white;
+    background-color: #7CB06C;
+}
+
+p.circle-four {
+    height: 100px;
+    width: 100px;
+    border: 8px solid white;
+    background-color: #00ABA9;
+}
+
+.ipad{
+    height: 150px;
+    width: 280px;
+    border:8px solid #F0F0F0;
+    border-radius: 8px;
+}
+
+p.circle-icon-one {
+    height: 18px;
+    width: 18px;
+    background-color: #EB9D3A;
+}
+
+p.circle-icon-two {
+    height: 18px;
+    width: 18px;
+    background-color: #E6563B;
+}
+
+p.circle-icon-three {
+    height: 18px;
+    width: 18px;
+    background-color: #7CB06C;
+}
+
+p.circle-icon-four {
+    height: 18px;
+    width: 18px;
+    background-color: #00ABA9;
+}
+
