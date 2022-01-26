@@ -445,15 +445,29 @@
 // // print out the cat at index 1
 // console.log(getNthCat(myCats, 1));
 
+//
+// var cats = [
+//         {catName: "Fifi", age: 5},
+//         {catName: "Fluffy", age: 3},
+//         {catName: "Abby", age: 7}
+// ];
+//
+// function getNthCat (cats, n) {
+//     return cats[n];
+// }
+//
+// console.log(getNthCat(cats, 2));
 
-var cats = [
-        {catName: "Fifi", age: 5},
-        {catName: "Fluffy", age: 3},
-        {catName: "Abby", age: 7}
-];
-
-function getNthCat (cats, n) {
-    return cats[n];
-}
-
-console.log(getNthCat(cats, 2));
+// Write a function called findAverage that takes in an array of integers representing grades and returns the average.
+//     Example input: [95, 74, 86, 100]
+// Example output: 88.75
+// let total = 0;
+// function findAverage(grades) {
+//     let average = total / grades.length
+//     for (let i = 0; i < grades.length; i++) {
+//         total += grades[i]
+//     }
+//     return average
+// }
+//
+// findAverage([95, 74, 86, 100])
