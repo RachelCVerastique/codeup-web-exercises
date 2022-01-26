@@ -4,8 +4,14 @@ body {
 }
 
 #logo {
+    position: absolute;
+    top: -23px;
     height: 105px;
     width: 105px;
+}
+
+.logo-row {
+    height: 60px;
 }
 
 .codeup-design {
@@ -72,3 +78,19 @@ p.circle-icon-four {
     background-color: #00ABA9;
 }
 
+@media (min-width: 576px) {
+
+    body {
+
+    }
+
+    .services {
+        position: absolute;
+        top: -3px;
+
+    }
+
+
+
+
+}
