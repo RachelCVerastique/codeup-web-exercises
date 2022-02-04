@@ -481,9 +481,23 @@
 // e.g., console.log(sumOfSquares(2, 3));
 // will return 13
 
-function sumOfSquares(a, b) {
-    return Math.pow(a, 2) Math.pow(b,2);
+// function sumOfSquares(a, b) {
+//     return Math.pow(a, 2) Math.pow(b,2);
+//
+// }
+//
+// console.log(sumOfSquares(2,2));
 
+function whichIsLonger(a ,b) {
+    If (typeof a !== "string" || typeof b !== "string") {
+        return false;
+    } else if(a.length > b.length) {
+        return "first is longer";
+    } else if (b.length > a.length) {
+        return "second is longer";
+    } else if (a.length === b.length) {
+        return "neither";
+    }
 }
 
-console.log(sumOfSquares(2,2));
+console.log(whichIsLonger(2, "i have an apple i have a pen "))
