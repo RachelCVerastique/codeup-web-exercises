@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <style>
+
+        .i {
+            visibility: hidden;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <dl>
+
+        <dt>Is National Parks Traveler associated with the National Park Service?</dt>
+
+            <dd>No, while the Traveler supports the mission of the Park Service, it is in no way affiliated or associated with the National Park Service. The website is operated by National Park Advocates, LLC.</dd>
+
+    </dl>
+
+    <a href="#" id="=link">Click to toggle visibility of answers!</a>
+
+
+
+<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+    <script>
+        "use strict";
+
+        $(document).ready(function() {
+
+            $('dd').addClass('i');
+
+
+            $('#link').click(function(){
+
+                $('dd').toggleClass('i');
+            });
+
+
+
+
+
+
+
+        });
+
+    </script>
+</body>
+</html>

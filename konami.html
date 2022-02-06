@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+
+
+
+
+
+
+
+
+<script src="/js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+    $(document).ready(function () {
+
+
+        let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+        let konamiPos = 0;
+
+        $(document).keyup(function(event){
+        console.log(event.keyCode);
+
+
+
+
+
+        if (event.keyCode === konamiCode[konamiPos]) {
+            konamiPos++
+
+        if (konamiPos === konamiCode.length) {
+            letsGo();
+            konamiPos = 0;
+        }
+        } else {
+            konamiPos = 0;
+        }
+
+        });
+
+        function letsGo() {
+        alert('YOU HAVE EARNED 30 LIVES!')
+            $('body').html('<img src="https://i0.wp.com/gifrific.com/wp-content/uploads/2012/08/PSY-Gangnam-Style-Dance.gif?resize=320%2C167&ssl=1">')
+            $('body').html('<audio src=""></audio>')
+        }
+    });
+
+
+</script>
+</body>
+</html>
