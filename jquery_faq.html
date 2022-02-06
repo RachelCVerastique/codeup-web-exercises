@@ -4,24 +4,69 @@
     <title>Title</title>
     <style>
 
-        .i {
-            visibility: hidden;
+        /*.i {*/
+        /*    visibility: hidden;*/
 
-        }
 
     </style>
 </head>
 <body>
 
-    <dl>
 
-        <dt>Is National Parks Traveler associated with the National Park Service?</dt>
 
-            <dd>No, while the Traveler supports the mission of the Park Service, it is in no way affiliated or associated with the National Park Service. The website is operated by National Park Advocates, LLC.</dd>
 
-    </dl>
+<!--traversing---------------------------------------------------------->
 
-    <a href="#" id="=link">Click to toggle visibility of answers!</a>
+<!--    <h1>Parks List</h1>-->
+
+<!--    <h3>National Parks</h3>-->
+<!--        <ul id="national-parks">-->
+<!--            <li>Arches</li>-->
+<!--            <li>Badlands</li>-->
+<!--            <li>Carlsbad Caverns</li>-->
+<!--            <li>Everglades</li>-->
+<!--        </ul>-->
+
+<!--    <h3>State Parks of Texas</h3>-->
+<!--        <ul id="state-parks-texas">-->
+<!--            <li>Abilene</li>-->
+<!--            <li>Big Bend</li>-->
+<!--            <li>Choke Canyon</li>-->
+<!--            <li>Enchanted Rock</li>-->
+<!--        </ul>-->
+<!--    <h3>Languages</h3>-->
+<!--        <ul id="languages">-->
+<!--            <li>Linux</li>-->
+<!--            <li>Apache</li>-->
+<!--            <li>MySQL</li>-->
+<!--            <li>Javascript</li>-->
+<!--        </ul>-->
+
+
+
+<!--<button id="btn" type="button">Highlight Me</button>-->
+
+
+
+
+
+
+
+
+
+
+
+<!--toggling---------------------------------------------------------------->
+
+<!--    <dl>-->
+
+<!--        <dt>Is National Parks Traveler associated with the National Park Service?</dt>-->
+
+<!--            <dd>No, while the Traveler supports the mission of the Park Service, it is in no way affiliated or associated with the National Park Service. The website is operated by National Park Advocates, LLC.</dd>-->
+
+<!--    </dl>-->
+
+<!--    <a href="#" id="=link">Click to toggle visibility of answers!</a>-->
 
 
 
@@ -30,20 +75,36 @@
         "use strict";
 
         $(document).ready(function() {
+//----------Traversing---------------
 
-            $('dd').addClass('i');
+            // $('#btn').click(function() {
+            //
+            //     $('#languages').children().last().css('background-color', 'yellow')
+            //     $('#state-parks-texas').children().last().css('background-color', 'yellow')
+            //     $('#national-parks').children().last().css('background-color', 'yellow')
+            // });
+            //
+            //
+            // $('h3').click(function (){
+            //     $(this).next().children().css('font-weight', 'bold')
+            // });
+            //
+            //
+            // $('li').click(function () {
+            //     $(this).parent().children().first().css('color', 'blue')
+            // })
 
 
-            $('#link').click(function(){
-
-                $('dd').toggleClass('i');
-            });
 
 
-
-
-
-
+//----toggling------
+            // $('dd').addClass('i');
+            //
+            //
+            // $('#link').click(function(){
+            //
+            //     $('dd').toggleClass('i');
+            // });
 
         });
 
