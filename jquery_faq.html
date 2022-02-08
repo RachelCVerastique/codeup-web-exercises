@@ -6,6 +6,7 @@
 
         /*.i {*/
         /*    visibility: hidden;*/
+        /*}*/
 
 
     </style>
@@ -17,34 +18,34 @@
 
 <!--traversing---------------------------------------------------------->
 
-<!--    <h1>Parks List</h1>-->
+    <h1>Parks List</h1>
 
-<!--    <h3>National Parks</h3>-->
-<!--        <ul id="national-parks">-->
-<!--            <li>Arches</li>-->
-<!--            <li>Badlands</li>-->
-<!--            <li>Carlsbad Caverns</li>-->
-<!--            <li>Everglades</li>-->
-<!--        </ul>-->
+    <h3>National Parks</h3>
+        <ul id="national-parks">
+            <li>Arches</li>
+            <li>Badlands</li>
+            <li>Carlsbad Caverns</li>
+            <li>Everglades</li>
+        </ul>
 
-<!--    <h3>State Parks of Texas</h3>-->
-<!--        <ul id="state-parks-texas">-->
-<!--            <li>Abilene</li>-->
-<!--            <li>Big Bend</li>-->
-<!--            <li>Choke Canyon</li>-->
-<!--            <li>Enchanted Rock</li>-->
-<!--        </ul>-->
-<!--    <h3>Languages</h3>-->
-<!--        <ul id="languages">-->
-<!--            <li>Linux</li>-->
-<!--            <li>Apache</li>-->
-<!--            <li>MySQL</li>-->
-<!--            <li>Javascript</li>-->
-<!--        </ul>-->
+    <h3>State Parks of Texas</h3>
+        <ul id="state-parks-texas">
+            <li>Abilene</li>
+            <li>Big Bend</li>
+            <li>Choke Canyon</li>
+            <li>Enchanted Rock</li>
+        </ul>
+    <h3>Languages</h3>
+        <ul id="languages">
+            <li>Linux</li>
+            <li>Apache</li>
+            <li>MySQL</li>
+            <li>Javascript</li>
+        </ul>
 
 
 
-<!--<button id="btn" type="button">Highlight Me</button>-->
+<button id="btn" type="button">Highlight Me</button>
 
 
 
@@ -66,7 +67,7 @@
 
 <!--    </dl>-->
 
-<!--    <a href="#" id="=link">Click to toggle visibility of answers!</a>-->
+<!--    <a href="#" id="link">Click to toggle visibility of answers!</a>-->
 
 
 
@@ -74,8 +75,13 @@
     <script>
         "use strict";
 
-        $(document).ready(function() {
+        $(document).ready(function () {
 //----------Traversing---------------
+
+            $('#btn').click(function (){
+                $()
+            })
+
 
             // $('#btn').click(function() {
             //
@@ -83,28 +89,28 @@
             //     $('#state-parks-texas').children().last().css('background-color', 'yellow')
             //     $('#national-parks').children().last().css('background-color', 'yellow')
             // });
-            //
-            //
-            // $('h3').click(function (){
-            //     $(this).next().children().css('font-weight', 'bold')
-            // });
-            //
-            //
-            // $('li').click(function () {
-            //     $(this).parent().children().first().css('color', 'blue')
-            // })
+
+
+            $('h3').click(function (){
+                $(this).next().children().css('font-weight', 'bold')
+            });
+
+
+            $('li').click(function () {
+                $(this).parent().children().first().css('color', 'blue')
+            })
 
 
 
 
 //----toggling------
-            // $('dd').addClass('i');
-            //
-            //
-            // $('#link').click(function(){
-            //
-            //     $('dd').toggleClass('i');
-            // });
+//             $('dd').addClass('i');
+//
+//
+//             $('#link').click(function(){
+//
+//                 $('dd').toggleClass('i');
+//             });
 
         });
 
