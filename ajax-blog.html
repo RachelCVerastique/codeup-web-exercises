@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog</title>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+
+
+    <div id="posts">
+
+        <div id="insert-post">
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+<script>
+    (function() {
+        "use strict";
+
+        $.ajax("data/blog.json", {
+            type: "GET"
+        }).done(function(data, status, jqXhr) {
+            data.forEach(function(post) {
+                var blogPostHtml = `
+                <div id="insert-post">
+                    <p>${post.date}</p>
+                    <p>${post.title}</p>
+                    <p>${post.categories}</p>
+                    <p>${post.content}</p>
+
+
+                    </div>`;
+                $('#insert-post').append(blogPostHtml)
+
+            })
+
+        })
+
+
+
+
+
+
+
+    })();
+</script>
+</body>
+</html>
