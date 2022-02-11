@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--    meta includes setup for media queries-->
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>First Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
+    <link rel="stylesheet"
+          href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css"
+          type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My First Mapbox Map!</h1>
+
+<div class="container-fluid">
+    <div id="forecast-div" class="row">
+
+    </div>
+</div>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+
+<!-- Jquery -->
+<script src="js/jquery-2.2.4.js"></script>
+<!--bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+<!-- Mapbox  -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+<!-- Key -->
+<script src="js/keys.js"></script>
+<!--&lt;!&ndash; Mapbox Geocoder Util Methods &ndash;&gt;-->
+<!--<script src="mapbox-geocoder-utils.js"></script>-->
+
+
+<!-- Custom JS -->
+<script>
+
+    'use strict';
+
+    var STARTING_COORDS = [-98.4916, 29.4252];
+    var OPTIMAL_ZOOM_LEVEL = 15;
+    mapboxgl.accessToken = MY_MAPBOX_API_KEY;
+
+    //hook up mapbox with the map div -- this puts a map on the page
+
+    //Function calls
+    var map = createMap(STARTING_COORDS);
+    createMarker(STARTING_COORDS, map);
+    getWeather(STARTING_COORDS);
+
+    function createMap(coordinates) {
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v9',
+            zoom: 10,
+            center: coordinates,
+        });
+
+        return map;
+    }
+
+
+    function createMarker(coordinates, map) {
+        var marker = new mapboxgl.Marker({
+            draggable: true
+        }).setLngLat(coordinates)
+            .addTo(map);
+
+        return marker;
+    }
+
+    function getWeather(coords) {
+        var lng = coords[0];
+        var lat = coords[1];
+        $.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&exclude=hourly,minutely&appid=${MY_OPENWEATHER_API_KEY}&units=imperial`)
+            .done(function (data) {
+                console.log(data);
+
+                for (let i = 0; i < 5; i++) {
+                    var highTemp = data.daily[i].temp.max;
+                    var lowTemp = data.daily[i].temp.min;
+                    //var description = data.daily[i].description;
+                    var humidity = data.daily[i].humidity;
+                    var wind = data.daily[i].wind_speed;
+                    var pressure = data.daily[i].pressure;
+                    var convertDate = new Date(data.daily[i].dt * 1000);
+                    var simpleDate = convertDate.toLocaleDateString().split('/').reverse().join('-');
+                    var html = "";
+
+                    html += `
+                            <div class="card" style="width: 18rem;">
+              <div class="card-header text-center">
+                ${simpleDate}
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">H ${highTemp}°F / L ${lowTemp}°F</li>
+                <li class="list-group-item">Description: <br><br> Humidity: ${humidity}</li>
+                <li class="list-group-item">Wind: ${wind}</li>
+                <li class="list-group-item">Pressure: ${pressure}</li>
+              </ul>
+            </div>`
+                    $('#forecast-div').append(html);
+                }
+
+
+
+
+
+            })
+    }
+
+
+</script>
+</body>
+</html>
