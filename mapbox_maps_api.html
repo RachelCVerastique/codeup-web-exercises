@@ -70,14 +70,14 @@
 
 
 
-    function onMoveEnd() {
-        var coords = map.getCenter();
-        //console.log(coords);
-        marker.setLngLat(coords);
-        makePopupForCoords(coords);
-    }
-
-        map.on('moveend', onMoveEnd);
+    // function onMoveEnd() {
+    //     var coords = map.getCenter();
+    //     //console.log(coords);
+    //     marker.setLngLat(coords);
+    //     makePopupForCoords(coords);
+    // }
+    //
+    //     map.on('moveend', onMoveEnd);
 
 
 
@@ -113,11 +113,11 @@
     function onDragEnd() {
         // grab marker coords whenever it was dropped
         const coords = marker.getLngLat();
-        //console.log(coords);
+        console.log(coords);
 
 
         //make a popup for the coords and attach it to the marker
-        makePopupForCoords(coords);
+       // makePopupForCoords(coords);
     }
         function makePopupForCoords(coords) {
             //coords is an object of coordinates, lets make an array of the coordinates

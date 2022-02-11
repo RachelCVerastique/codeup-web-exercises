@@ -23,7 +23,14 @@
 </head>
 <body>
 
-<h1 class="bg-primary ">Weather App</h1>
+
+
+
+
+<div id="header">
+    <h1 class="bg-primary color text-white">Weather App</h1>
+    <h4 id="current-City"></h4>
+</div>
 
 <div class="container-fluid">
     <div id="forecast-div" class="row d-flex justify-content-around flex-nowrap">
@@ -33,6 +40,12 @@
 
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
+
+
+
+
+
+
 
 
 <!-- Jquery -->
@@ -58,13 +71,28 @@
     var STARTING_COORDS = [-98.4916, 29.4252];
     var OPTIMAL_ZOOM_LEVEL = 15;
     mapboxgl.accessToken = MY_MAPBOX_API_KEY;
+    var geocoder =
+        new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            zoom: OPTIMAL_ZOOM_LEVEL,
+            //placeholder: 'Try: -40, 170',
+            mapboxgl: mapboxgl,
+            marker: false,
+
+        })
+
+    //console.log(geocoder)
 
     //hook up mapbox with the map div -- this puts a map on the page
 
-    //Function calls
+    // Function calls
     var map = createMap(STARTING_COORDS);
-    createMarker(STARTING_COORDS, map);
+    var marker = createMarker(STARTING_COORDS, map);
     getWeather(STARTING_COORDS);
+    map.addControl(geocoder);
+    map.on('moveend', onMoveEnd);
+    marker.on('dragend', onDragEnd);
+
 
     function createMap(coordinates) {
         var map = new mapboxgl.Map({
@@ -81,15 +109,44 @@
     function createMarker(coordinates, map) {
         var marker = new mapboxgl.Marker({
             draggable: true
-        }).setLngLat(coordinates)
+        })
+            .setLngLat(coordinates)
             .addTo(map);
 
         return marker;
     }
 
+
+    function onMoveEnd() {
+        var coords = map.getCenter();
+        //console.log(coords);
+        marker.setLngLat(coords);
+        var coordArray = [coords.lng, coords.lat]
+        getWeather(coordArray);
+    }
+
+
+
+
+    // grab marker coords whenever it was dropped
+    function onDragEnd() {
+        var coords = marker.getLngLat();
+        //console.log(coords);
+        var coordArray = [coords.lng, coords.lat]
+        getWeather(coordArray);
+    }
+
+
+
+
+
+
+
     function getWeather(coords) {
         var lng = coords[0];
         var lat = coords[1];
+        $('#forecast-div').empty();
+
         $.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&exclude=hourly,minutely&appid=${MY_OPENWEATHER_API_KEY}&units=imperial`)
             .done(function (data) {
                 console.log(data);
@@ -97,35 +154,35 @@
                 for (let i = 0; i < 5; i++) {
                     var highTemp = data.daily[i].temp.max;
                     var lowTemp = data.daily[i].temp.min;
-                    //var description = data.daily[i].description;
+                    var description = data.daily[i].weather[0].description;
                     var humidity = data.daily[i].humidity;
                     var wind = data.daily[i].wind_speed;
                     var pressure = data.daily[i].pressure;
                     var convertDate = new Date(data.daily[i].dt * 1000);
                     var simpleDate = convertDate.toLocaleDateString().split('/').reverse().join('-');
+                    var icon = data.daily[i].weather[0].icon;
                     var html = "";
 
-                    html += `
-                            <div class="card" style="width: 18rem;">
-              <div class="card-header text-center">
-                ${simpleDate}
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">H ${highTemp}°F / L ${lowTemp}°F</li>
-                <li class="list-group-item">Description: <br><br> Humidity: ${humidity}</li>
-                <li class="list-group-item">Wind: ${wind}</li>
-                <li class="list-group-item">Pressure: ${pressure}</li>
-              </ul>
-            </div>`
-                    $('#forecast-div').append(html);
+                            html += `
+                                    <div class="card" style="width: 18rem;">
+                      <div class="card-header text-center">
+                        ${simpleDate}
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-center"> ${highTemp}°F /  ${lowTemp}°F <br> <img src="http://openweathermap.org/img/w/${icon}.png"> </li>
+                        <li class="list-group-item">Description: ${description}<br><br> Humidity: ${humidity}</li>
+                        <li class="list-group-item">Wind: ${wind}</li>
+                        <li class="list-group-item">Pressure: ${pressure}</li>
+                      </ul>
+                    </div>`
+                            $('#forecast-div').append(html);
                 }
-
-
-
-
 
             })
     }
+
+
+
 
 
 </script>
