@@ -40,12 +40,12 @@
 
 <div class="container">
 
-    <div id="header" class="row header d-flex">
+    <div id="header" class="row header">
         <h1 class="col-lg-6 bg-primary color text-white">Weather App</h1>
         <h2 id="current-City" class=" current-city bg-primary color text-white "></h2>
     </div>
 
-    <div class="row">
+    <div class="row d-flex align-content-end">
         <div id="geocoder"class="col-lg-12 geocoder" ></div>
     </div>
 
@@ -170,7 +170,7 @@
                     var wind = data.daily[i].wind_speed;
                     var pressure = data.daily[i].pressure;
                     var convertDate = new Date(data.daily[i].dt * 1000);
-                    var simpleDate = convertDate.toISOString()//.toLocaleDateString().split('/').reverse().join('-');
+                    var simpleDate = convertDate.toISOString().replace('T18:00:00.000Z','')//.toLocaleDateString().split('/').reverse().join('-');
                     var icon = data.daily[i].weather[0].icon;
                     var html = "";
 
@@ -194,12 +194,12 @@
             lng: lng,
             lat: lat
         },MY_MAPBOX_API_KEY).then(function (result){
-            $('#current-City').html("Current city: " + result)
+            $('#current-City').html("Current city: " + result);
         })
             })
     }
 
-
+console.log(reverseGeocode)
     document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
 </script>

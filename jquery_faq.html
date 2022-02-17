@@ -4,9 +4,9 @@
     <title>Title</title>
     <style>
 
-        /*.i {*/
-        /*    visibility: hidden;*/
-        /*}*/
+        .i {
+            visibility: hidden;
+        }
 
 
     </style>
@@ -59,15 +59,15 @@
 
 <!--toggling---------------------------------------------------------------->
 
-<!--    <dl>-->
+    <dl>
 
-<!--        <dt>Is National Parks Traveler associated with the National Park Service?</dt>-->
+        <dt>Is National Parks Traveler associated with the National Park Service?</dt>
 
-<!--            <dd>No, while the Traveler supports the mission of the Park Service, it is in no way affiliated or associated with the National Park Service. The website is operated by National Park Advocates, LLC.</dd>-->
+            <dd>No, while the Traveler supports the mission of the Park Service, it is in no way affiliated or associated with the National Park Service. The website is operated by National Park Advocates, LLC.</dd>
 
-<!--    </dl>-->
+    </dl>
 
-<!--    <a href="#" id="link">Click to toggle visibility of answers!</a>-->
+    <a href="#" id="link">Click to toggle visibility of answers!</a>
 
 
 
@@ -78,17 +78,17 @@
         $(document).ready(function () {
 //----------Traversing---------------
 
-            $('#btn').click(function (){
-                $()
-            })
+            // $('#btn').click(function (){
+            //     $()
+            // })
 
 
-            // $('#btn').click(function() {
-            //
-            //     $('#languages').children().last().css('background-color', 'yellow')
-            //     $('#state-parks-texas').children().last().css('background-color', 'yellow')
-            //     $('#national-parks').children().last().css('background-color', 'yellow')
-            // });
+            $('#btn').click(function() {
+
+                $('#languages').children().last().css('background-color', 'yellow')
+                $('#state-parks-texas').children().last().css('background-color', 'yellow')
+                $('#national-parks').children().last().css('background-color', 'yellow')
+            });
 
 
             $('h3').click(function (){
@@ -104,13 +104,13 @@
 
 
 //----toggling------
-//             $('dd').addClass('i');
-//
-//
-//             $('#link').click(function(){
-//
-//                 $('dd').toggleClass('i');
-//             });
+            $('dd').addClass('i');
+
+
+            $('#link').click(function(){
+
+                $('dd').toggleClass('i');
+            });
 
         });
 
