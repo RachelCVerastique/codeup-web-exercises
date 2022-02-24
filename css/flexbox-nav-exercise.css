@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+
+}
+
+a {
+    display: inline-flex;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.nav-link {
+    margin-right: 2em;
+    text-decoration: none;
+    color: black;
+
+}
+
+.top-nav {
+    display: flex;
+}
